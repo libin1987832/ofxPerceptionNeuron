@@ -278,7 +278,17 @@ const ofxBvhJoint* ofxBvh::getJoint(string name)
 {
 	return jointMap[name];
 }
-
+const int ofxBvh::getJointsIndex(string name)
+{
+	for (int i=0;i<joints.size();i++)
+	{
+		if (joints[i]->getName() == name)
+		{
+			return i;
+		}
+	}
+	return -1;
+}
 static inline void billboard()
 {
 	GLfloat m[16];

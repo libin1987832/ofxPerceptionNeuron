@@ -8,7 +8,9 @@
 namespace ofxPerceptionNeuron
 {
     class DataReader;
-    
+	static int status;
+	static int frameNum;
+	static int frameindex;
     struct Joint
     {
         string name;
@@ -49,7 +51,7 @@ namespace ofxPerceptionNeuron
         map<string, Skeleton*> skeletons_map;
     public:
         DataReader();
-        void connect(string ip, int port);
+        void BRconnect(string ip, int port);
         void disconnect();
         void update();
         bool isConnected() const;

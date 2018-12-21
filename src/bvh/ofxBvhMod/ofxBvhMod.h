@@ -67,7 +67,7 @@ public:
 	
     void update(const vector<float>& data);
 	void draw();
-		
+	const int getJointsIndex(string name);
 	const int getNumJoints() const { return joints.size(); }
 	const ofxBvhJoint* getJoint(int index);
 	const ofxBvhJoint* getJoint(string name);
